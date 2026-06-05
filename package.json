@@ -1,0 +1,8 @@
+{
+  "name": "pss-payslip-generator",
+  "version": "1.0.0",
+  "description": "PSS Payslip Generator with Resend email integration",
+  "dependencies": {
+    "resend": "^3.2.0"
+  }
+}
