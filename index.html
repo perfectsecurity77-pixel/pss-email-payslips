@@ -1045,7 +1045,8 @@ async function sendAllPayslips() {
       <div style="font-family:Arial,sans-serif;max-width:650px;margin:0 auto;border:2px solid #1a3a6b;border-radius:6px;overflow:hidden;">
         <div style="background:#1a3a6b;padding:16px 20px;color:#fff;">
           <h2 style="margin:0;font-size:18px;">Perfect Security Services</h2>
-          <p style="margin:4px 0 0;font-size:12px;opacity:0.85;">Payslip for ${month}</p>
+          <p style="margin:3px 0 0;font-size:11px;opacity:0.80;">${COMPANY_ADDRESS}</p>
+          <p style="margin:6px 0 0;font-size:12px;opacity:0.85;">Payslip for ${month}</p>
         </div>
         <div style="padding:16px 20px;background:#f0f4fb;">
           <p style="margin:0;font-size:14px;">Dear <strong>${name}</strong>,</p>
@@ -1059,6 +1060,9 @@ async function sendAllPayslips() {
             ${val(row,'designation') ? `<tr><td style="padding:4px 12px;border:1px solid #ddd;font-weight:600;">Worker Type</td><td style="padding:4px 12px;border:1px solid #ddd;">${val(row,'designation')}</td></tr>` : ''}
             ${val(row,'daysWorked')  ? `<tr><td style="padding:4px 12px;border:1px solid #ddd;font-weight:600;">Working Days</td><td style="padding:4px 12px;border:1px solid #ddd;">${val(row,'daysWorked')}</td></tr>` : ''}
             ${val(row,'otDays')      ? `<tr><td style="padding:4px 12px;border:1px solid #ddd;font-weight:600;">OT Days</td><td style="padding:4px 12px;border:1px solid #ddd;">${val(row,'otDays')}</td></tr>` : ''}
+            ${val(row,'uan')         ? `<tr><td style="padding:4px 12px;border:1px solid #ddd;font-weight:600;">UAN No.</td><td style="padding:4px 12px;border:1px solid #ddd;">${val(row,'uan')}</td></tr>` : ''}
+            ${val(row,'esi')         ? `<tr><td style="padding:4px 12px;border:1px solid #ddd;font-weight:600;">ESI No.</td><td style="padding:4px 12px;border:1px solid #ddd;">${val(row,'esi')}</td></tr>` : ''}
+            ${val(row,'site')        ? `<tr><td style="padding:4px 12px;border:1px solid #ddd;font-weight:600;">Company Name</td><td style="padding:4px 12px;border:1px solid #ddd;">${val(row,'site')}</td></tr>` : ''}
           </table>
           <table style="width:100%;border-collapse:collapse;margin-bottom:16px;">
             <tr style="background:#dce8f8;"><th colspan="2" style="padding:8px 12px;border:1px solid #ddd;text-align:left;font-size:13px;">💰 Earnings</th></tr>
@@ -1076,7 +1080,7 @@ async function sendAllPayslips() {
           </div>
         </div>
         <div style="background:#f5f7fb;padding:10px 20px;text-align:center;font-size:11px;color:#666;border-top:1px solid #ddd;">
-          Computer-generated payslip. No signature required. | Perfect Security Services
+          Computer-generated payslip. No signature required.
         </div>
       </div>`;
 
