@@ -896,6 +896,9 @@ function renderPayslip(row, idx) {
           <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:12px 20px;border-top:2.5px solid #1a3a6b;">NET WAGES</td>
           <td style="background:#1a3a6b;color:#fff;font-size:18px;font-weight:900;text-align:right;padding:12px 20px;border-top:2.5px solid #1a3a6b;white-space:nowrap;">₹ ${netPayDisp}</td>
         </tr>
+        <tr>
+          <td colspan="2" style="background:#e8eef7;color:#1a3a6b;font-size:10.5px;font-style:italic;font-weight:600;text-align:center;padding:6px 20px;letter-spacing:0.2px;border-bottom:2px solid #1a3a6b;">${numberToWords(netPayRaw)}</td>
+        </tr>
       </table>
 
       <!-- FOOTER -->
@@ -998,6 +1001,9 @@ function printAll() {
             <tr>
               <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:12px 20px;border-top:2.5px solid #1a3a6b;">NET WAGES</td>
               <td style="background:#1a3a6b;color:#fff;font-size:18px;font-weight:900;text-align:right;padding:12px 20px;border-top:2.5px solid #1a3a6b;white-space:nowrap;">₹ ${fmtNum(netPayRaw)}</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="background:#e8eef7;color:#1a3a6b;font-size:10.5px;font-style:italic;font-weight:600;text-align:center;padding:6px 20px;letter-spacing:0.2px;border-bottom:2px solid #1a3a6b;">${numberToWords(netPayRaw)}</td>
             </tr>
           </table>
           <!-- FOOTER -->
@@ -1108,8 +1114,11 @@ async function sendAllPayslips() {
           </table>
           <table style="width:100%;border-collapse:collapse;">
             <tr>
-              <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:14px 20px;border-radius:4px 0 0 4px;">NET WAGES</td>
-              <td style="background:#1a3a6b;color:#fff;font-size:20px;font-weight:900;text-align:right;padding:14px 20px;border-radius:0 4px 4px 0;white-space:nowrap;">₹ ${fmtNum(netPay)}</td>
+              <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:14px 20px;border-radius:4px 0 0 0;">NET WAGES</td>
+              <td style="background:#1a3a6b;color:#fff;font-size:20px;font-weight:900;text-align:right;padding:14px 20px;border-radius:0 4px 0 0;white-space:nowrap;">₹ ${fmtNum(netPay)}</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="background:#e8eef7;color:#1a3a6b;font-size:11px;font-style:italic;font-weight:600;text-align:center;padding:7px 20px;border:2px solid #1a3a6b;border-top:none;border-radius:0 0 4px 4px;">${numberToWords(netPay)}</td>
             </tr>
           </table>
         </div>
