@@ -891,13 +891,12 @@ function renderPayslip(row, idx) {
       </div>
 
       <!-- NET PAY -->
-      <div style="background:#1a3a6b;color:#fff;border-top:2.5px solid #1a3a6b;border-bottom:2px solid #1a3a6b;padding:12px 20px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;width:100%;box-sizing:border-box;">
-        <span style="font-size:12px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;color:#fff;">NET WAGES</span>
-        <span style="font-size:18px;font-weight:900;letter-spacing:1px;color:#fff;">₹ ${netPayDisp}</span>
-      </div>
-      <div style="background:#e8eef7;border-bottom:2px solid #1a3a6b;padding:6px 20px;font-size:10.5px;font-style:italic;color:#1a3a6b;font-weight:600;text-align:center;letter-spacing:0.2px;">
-        ${numberToWords(netPayRaw)}
-      </div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr>
+          <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:12px 20px;border-top:2.5px solid #1a3a6b;">NET WAGES</td>
+          <td style="background:#1a3a6b;color:#fff;font-size:18px;font-weight:900;text-align:right;padding:12px 20px;border-top:2.5px solid #1a3a6b;white-space:nowrap;">₹ ${netPayDisp}</td>
+        </tr>
+      </table>
 
       <!-- FOOTER -->
       <div class="ps-footer-band">
@@ -995,13 +994,12 @@ function printAll() {
             </div>
           </div>
           <!-- NET PAY -->
-          <div style="background:#1a3a6b;color:#fff;border-top:2.5px solid #1a3a6b;border-bottom:2px solid #1a3a6b;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;">
-            <div style="font-size:12px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;">NET WAGES</div>
-            <div style="font-size:18px;font-weight:900;letter-spacing:1px;">₹ ${fmtNum(netPayRaw)}</div>
-          </div>
-          <div style="background:#e8eef7;border-bottom:2px solid #1a3a6b;padding:6px 20px;font-size:10.5px;font-style:italic;color:#1a3a6b;font-weight:600;text-align:center;letter-spacing:0.2px;">
-            ${numberToWords(netPayRaw)}
-          </div>
+          <table style="width:100%;border-collapse:collapse;">
+            <tr>
+              <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:12px 20px;border-top:2.5px solid #1a3a6b;">NET WAGES</td>
+              <td style="background:#1a3a6b;color:#fff;font-size:18px;font-weight:900;text-align:right;padding:12px 20px;border-top:2.5px solid #1a3a6b;white-space:nowrap;">₹ ${fmtNum(netPayRaw)}</td>
+            </tr>
+          </table>
           <!-- FOOTER -->
           <div style="background:#f5f7fb;border-top:1.5px solid #c8d4e8;padding:10px 20px;text-align:center;">
             <div style="font-size:10px;color:#555;font-style:italic;font-weight:500;">Computer-generated payslip. No signature required.</div>
@@ -1108,13 +1106,12 @@ async function sendAllPayslips() {
             ${deductLines}
             <tr style="background:#fce8e8;font-weight:700;"><td style="padding:6px 12px;border:1px solid #7a1a1a;">Total Deductions</td><td style="padding:6px 12px;border:1px solid #7a1a1a;text-align:right;">₹ ${fmtNum(deductSum)}</td></tr>
           </table>
-          <div style="background:#1a3a6b;color:#fff;padding:14px 20px;border-radius:4px 4px 0 0;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:14px;font-weight:700;letter-spacing:0.5px;">NET WAGES</span>
-            <span style="font-size:20px;font-weight:900;">₹ ${fmtNum(netPay)}</span>
-          </div>
-          <div style="background:#e8eef7;border:2px solid #1a3a6b;border-top:none;border-radius:0 0 4px 4px;padding:7px 20px;font-size:11px;font-style:italic;color:#1a3a6b;font-weight:600;text-align:center;">
-            ${numberToWords(netPay)}
-          </div>
+          <table style="width:100%;border-collapse:collapse;">
+            <tr>
+              <td style="background:#1a3a6b;color:#fff;font-size:13px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;padding:14px 20px;border-radius:4px 0 0 4px;">NET WAGES</td>
+              <td style="background:#1a3a6b;color:#fff;font-size:20px;font-weight:900;text-align:right;padding:14px 20px;border-radius:0 4px 4px 0;white-space:nowrap;">₹ ${fmtNum(netPay)}</td>
+            </tr>
+          </table>
         </div>
         <div style="background:#f5f7fb;padding:10px 20px;text-align:center;font-size:11px;color:#666;border-top:1px solid #ddd;">
           Computer-generated payslip. No signature required.
